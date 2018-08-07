@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+    <string name="title_activity_modulo_normal">Modulo_normal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_modulo_m_reducida">U. Pedagógica</string>
+    <string name="title_activity_modulo__estudiantes">U. Pedagógica</string>
+    <string name="title_activity_modulo__ciegos">Invidentes</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_edificios__abpec">Edificios_ABPEC</string>
+    <string name="title_activity_servicios__u">Servicios_U</string>
+    <string name="title_activity_sedes__u">Sedes_U</string>
+    <string name="title_activity_maps3">Map</string>
+</resources>

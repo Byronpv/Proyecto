@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_splash2"
+    tools:context="com.example.byron.proyecto.Rout_upn">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/upn"
+        android:layout_alignParentRight="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="315dp"
+        android:layout_height="374dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="130dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/logo_2" />
+
+
+    </RelativeLayout>
+
+
+
+

@@ -1,0 +1,18 @@
+<resources>
+
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark1</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/common_google_signin_btn_text_dark</item>
+        <item name="android:windowEnterTransition">@transition/transition_enter</item>
+        <!--<item name="android:windowExitTransition">@transition/transition_slide_left</item>-->
+        <item name="android:windowReenterTransition">@transition/transition_reenter</item>
+        <item name="android:windowReturnTransition">@transition/transition_return</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+
+    </style>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+        <item android:title="EDIFICIOS">
+            <menu>
+        <item
+            android:id="@+id/nav_edificioA"
+            android:icon="@drawable/edificio"
+            android:title="Edificio A" />
+        <item
+            android:id="@+id/nav_edificioB"
+            android:icon="@drawable/edificio"
+            android:title="Edificio B" />
+        <item
+            android:id="@+id/nav_edificioC"
+            android:icon="@drawable/edificio"
+            android:title="Edificio C" />
+        <item
+            android:id="@+id/nav_edificioP"
+            android:icon="@drawable/edificio"
+            android:title="Edificio P" />
+        <item
+            android:id="@+id/nav_edificioE"
+            android:icon="@drawable/edificio"
+            android:title="Edificio E" />
+            </menu>
+       </item>
+
+
+        <item android:title="SEDES">
+         <menu>
+
+            <item
+            android:id="@+id/sede_nogal"
+            android:icon="@drawable/edificio"
+            android:title="El Nogal" />
+            <item
+                android:id="@+id/sede_ideas"
+                android:icon="@drawable/edificio"
+                android:title="IDEAS" />
+            <item
+                android:id="@+id/sede_dar"
+                android:icon="@drawable/edificio"
+                android:title="División de Admisiones y Registro" />
+            <item
+                android:id="@+id/sede_calle72"
+                android:icon="@drawable/edificio"
+                android:title="Calle 72" />
+         </menu>
+        </item>
+
+
+        <item android:title="SERVICIOS">
+         <menu>
+            <item
+            android:id="@+id/nav_baños_Edi_E"
+            android:icon="@drawable/inodoro"
+            android:title="Baños-Edificio C" />
+            <item
+            android:id="@+id/nav_biblioteca"
+            android:icon="@drawable/lectura"
+            android:title="Biblioteca" />
+            <item
+            android:id="@+id/nav_restaurante"
+            android:icon="@drawable/cubiertos"
+            android:title="Restaurante" />
+            <item
+            android:id="@+id/nav_salonMP"
+            android:icon="@drawable/edificio"
+            android:title="Salón Multi-propósito" />
+            <item
+            android:id="@+id/nav_casitadebiología"
+            android:icon="@drawable/edificio"
+            android:title="Casa de Biología" />
+        </menu>
+       </item>
+
+
+
+</menu>
