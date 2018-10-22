@@ -26,7 +26,11 @@ import java.util.Locale;
  * Use the {@link Regresar_menu#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Regresar_menu extends Fragment implements TextToSpeech.OnInitListener, View.OnTouchListener, GestureDetector.OnGestureListener,  GestureDetector.OnDoubleTapListener  {
+public class Regresar_menu extends Fragment implements
+        TextToSpeech.OnInitListener,
+        View.OnTouchListener,
+        GestureDetector.OnGestureListener,
+        GestureDetector.OnDoubleTapListener  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -249,7 +253,7 @@ public class Regresar_menu extends Fragment implements TextToSpeech.OnInitListen
                 onVisible();
             } else {
                 onInVisible();
-                tts.stop();
+
             }
         }
     }
@@ -261,7 +265,7 @@ public class Regresar_menu extends Fragment implements TextToSpeech.OnInitListen
 
     public void onInVisible() {
         //  Toast.makeText(getActivity(),  "invisible", Toast.LENGTH_SHORT).show();
-
+        tts.stop();
     }
 
 }

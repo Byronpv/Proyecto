@@ -44,11 +44,15 @@
             <item
                 android:id="@+id/sede_dar"
                 android:icon="@drawable/edificio"
-                android:title="División de Admisiones y Registro" />
+                android:title="Subdirección de Admisiones y Registro" />
             <item
                 android:id="@+id/sede_calle72"
                 android:icon="@drawable/edificio"
                 android:title="Calle 72" />
+             <item
+                 android:id="@+id/sede_sanmartin"
+                 android:icon="@drawable/edificio"
+                 android:title="F. U. San Martín" />
          </menu>
         </item>
 

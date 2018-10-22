@@ -81,65 +81,116 @@ public class Modulo_m_reducida extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_biblioteca) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Biblioteca1";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.bibliotecaint);
+            startActivity(intent);
+
+
         } else if (id == R.id.nav_restaurante) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Restaurante";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
 
         } else if (id == R.id.nav_edificioA) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Edificio A1";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.edificioaa);
+            startActivity(intent);
 
         } else if (id == R.id.nav_edificioB) {
-
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Edificio B1";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.edificiob);
+            startActivity(intent);
 
         } else if (id == R.id.nav_edificioC) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Edificio C";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.edificioc);
+            startActivity(intent);
 
         } else if (id == R.id.nav_edificioE) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Edificio E";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.edificioe);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_edificioP) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
-
+            String valorString = "Edificio P1";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.edificiop);
+            startActivity(intent);
         }
         else if (id == R.id.nav_casitadebiología) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity.class);
-            startActivity(maps);
+            String valorString = "Casa de biología";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.casadebiologia);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_baños_Edi_E) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
-
+            String valorString = "Baños";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.banosc);
+            startActivity(intent);
         }
         else if (id == R.id.nav_salonMP) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
-        }
-        else if (id == R.id.sede_nogal) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
-        }
-        else if (id == R.id.sede_ideas) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
-        }
-        else if (id == R.id.sede_dar) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
+            String valorString = "SM";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivity.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.coliseo);
+            startActivity(intent);
+
         }
         else if (id == R.id.sede_calle72) {
-            Intent maps = new Intent(Modulo_m_reducida.this, MapsActivity2.class);
-            startActivity(maps);
+            String valorString = "Calle 72";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
+
         }
+        else if (id == R.id.sede_dar) {
+            String valorString = "Dar";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
+
+        }   else if (id == R.id.sede_ideas) {
+            String valorString = "Ideas";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
+        }
+        else if (id == R.id.sede_nogal) {
+            String valorString = "Nogal";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
+        }
+        else if (id == R.id.sede_sanmartin) {
+            String valorString = "SanMartin";
+            Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.sanmartin1);
+            startActivity(intent);
+        }
+
 
 
 

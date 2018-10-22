@@ -2,9 +2,12 @@ package com.example.byron.proyecto;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,6 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,13 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        videoView= (VideoView)findViewById(R.id.video);
+        videoView.setMediaController(new MediaController(this));
+        Uri uri= Uri.parse("rtsp://r5---sn-q4flrney.googlevideo.com/Cj0LENy73wIaNAltcAyvi-QbchMYDSANFC3vv4BbMOCoAUIASARg98265tT0vNNaigELNkNxX0FYU2F6Rm8M/374073AEFA3F1B800BEB9D548361A517B19CFCA8.224D5F8AC3690C74BCAEDC25F8F71FA3574CD88C/yt6/1/video.3gp");
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
     }
 
 

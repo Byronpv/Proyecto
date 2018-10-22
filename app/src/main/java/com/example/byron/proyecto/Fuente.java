@@ -18,6 +18,7 @@ public class Fuente {
     }
 
     public void setTitulo(String titulo) {
+
         this.titulo = titulo;
     }
 

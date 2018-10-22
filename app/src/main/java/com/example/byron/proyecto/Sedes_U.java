@@ -19,7 +19,13 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class Sedes_U extends AppCompatActivity implements Sede_calle72.OnFragmentInteractionListener,Sede_ideas.OnFragmentInteractionListener, Sede_Nogal.OnFragmentInteractionListener, Sede_dar.OnFragmentInteractionListener, Regresar_menu.OnFragmentInteractionListener{
+public class Sedes_U extends AppCompatActivity implements
+        Sede_calle72.OnFragmentInteractionListener,
+        Sede_ideas.OnFragmentInteractionListener,
+        Sede_Nogal.OnFragmentInteractionListener,
+        Sede_dar.OnFragmentInteractionListener,
+        Sede_SanMartin.OnFragmentInteractionListener,
+        Regresar_menu.OnFragmentInteractionListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -118,7 +124,10 @@ public class Sedes_U extends AppCompatActivity implements Sede_calle72.OnFragmen
                     break;
                 case 4: fragment = new Sede_Nogal();
                     break;
-                case 5: fragment = new Regresar_menu();
+                case 5: fragment = new Sede_SanMartin();
+                    break;
+
+                case 6: fragment = new Regresar_menu();
                     break;
 
             }
@@ -159,7 +168,7 @@ public class Sedes_U extends AppCompatActivity implements Sede_calle72.OnFragmen
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 5;
+            return 6;
         }
     }
 }

@@ -17,8 +17,13 @@
             android:id="@+id/imagnormal"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_gravity="center"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true" />
+
+
 
     </LinearLayout>
 

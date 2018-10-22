@@ -19,7 +19,13 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class Edificios_ABPEC extends AppCompatActivity implements EdificioA.OnFragmentInteractionListener,EdificioB.OnFragmentInteractionListener,EdificioC.OnFragmentInteractionListener,EdificioE.OnFragmentInteractionListener,EdificioP.OnFragmentInteractionListener,Regresar_menu.OnFragmentInteractionListener {
+public class Edificios_ABPEC extends AppCompatActivity implements
+        EdificioA.OnFragmentInteractionListener,
+        EdificioB.OnFragmentInteractionListener,
+        EdificioC.OnFragmentInteractionListener,
+        EdificioE.OnFragmentInteractionListener,
+        EdificioP.OnFragmentInteractionListener,
+        Regresar_menu.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

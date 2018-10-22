@@ -5,9 +5,15 @@
     android:id="@+id/maplayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+>
 
-    <LinearLayout
+    <RelativeLayout
 
 
         android:orientation="horizontal"
@@ -15,13 +21,17 @@
         android:layout_height="wrap_content" >
 
         <VideoView
-            android:id="@+id/imagnormal"
-            android:layout_width="match_parent"
+            android:id="@+id/video"
+            android:layout_width="fill_parent"
             android:layout_height="350dp"
             android:layout_gravity="center"
-            android:src="@drawable/normal" />
+            android:padding="10dp"
+            android:paddingEnd="10dp"
+            android:paddingHorizontal="10dp"
+            android:src="@drawable/normal"
+            android:paddingRight="10dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 

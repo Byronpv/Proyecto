@@ -1,5 +1,4 @@
 package com.example.byron.proyecto;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,12 +20,12 @@ import java.util.Locale;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link EdificioE.OnFragmentInteractionListener} interface
+ * {@link Sede_dar.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link EdificioE#newInstance} factory method to
+ * Use the {@link Sede_dar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EdificioE extends Fragment implements
+public class Sede_SanMartin extends Fragment implements
         TextToSpeech.OnInitListener,
         View.OnTouchListener,
         GestureDetector.OnGestureListener,
@@ -44,7 +43,7 @@ public class EdificioE extends Fragment implements
     private GestureDetectorCompat mDetector;
     private OnFragmentInteractionListener mListener;
 
-    public EdificioE() {
+    public Sede_SanMartin() {
         // Required empty public constructor
     }
 
@@ -57,8 +56,8 @@ public class EdificioE extends Fragment implements
      * @return A new instance of fragment EdificioA.
      */
     // TODO: Rename and change types and number of parameters
-    public static EdificioE newInstance(String param1, String param2) {
-        EdificioE fragment = new EdificioE();
+    public static Sede_SanMartin newInstance(String param1, String param2) {
+        Sede_SanMartin fragment = new Sede_SanMartin();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -82,13 +81,13 @@ public class EdificioE extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_edificio_e, container, false);
+        View view = inflater.inflate(R.layout.fragment_sede__san_martin, container, false);
         setHasOptionsMenu(true);
         view.setOnTouchListener(this);
 
 
         tts = new TextToSpeech(getActivity(),this);
-        tv11=(TextView)view.findViewById(R.id.edificioE);
+        tv11=(TextView)view.findViewById(R.id.sanmartin);
         return view;
     }
 
@@ -169,7 +168,7 @@ public class EdificioE extends Fragment implements
     @Override
     public boolean onDoubleTap(MotionEvent motionEvent) {
 
-        String valorString = "EdificioE";
+        String valorString = "SanMartin";
         Intent intent= new Intent (getActivity(), MapsActivity3.class);
         intent.putExtra("KeyString", valorString);
         startActivity(intent);
@@ -271,4 +270,3 @@ public class EdificioE extends Fragment implements
     }
 
 }
-

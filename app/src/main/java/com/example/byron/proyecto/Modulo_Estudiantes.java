@@ -160,31 +160,37 @@ public class Modulo_Estudiantes extends AppCompatActivity
         }
         else if (id == R.id.sede_calle72) {
             String valorString = "Calle 72";
-            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivity.class);
+            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.entrada72);
             startActivity(intent);
 
         }
         else if (id == R.id.sede_dar) {
             String valorString = "Dar";
-            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivity.class);
+            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.dar);
             startActivity(intent);
 
         }   else if (id == R.id.sede_ideas) {
             String valorString = "Ideas";
-            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivity.class);
+            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
             intent.putExtra("hola", R.drawable.restaurantex);
             startActivity(intent);
         }
         else if (id == R.id.sede_nogal) {
             String valorString = "Nogal";
-            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivity.class);
+            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
             intent.putExtra("hola", R.drawable.restaurantex);
+            startActivity(intent);
+        } else if (id == R.id.sede_sanmartin) {
+            String valorString = "SanMartin";
+            Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
+            intent.putExtra("KeyString", valorString);
+            intent.putExtra("hola", R.drawable.sanmartin1);
             startActivity(intent);
         }
 

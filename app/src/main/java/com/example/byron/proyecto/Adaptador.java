@@ -85,6 +85,7 @@ public class Adaptador extends RecyclerView.Adapter<ViewHolder> implements View.
         viewHolder.itemView.clearAnimation();
 
     }
+    /*
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
 
@@ -94,7 +95,7 @@ public class Adaptador extends RecyclerView.Adapter<ViewHolder> implements View.
         animateCircularReveal(viewHolder.itemView);
 
     }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+ @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 
     public void animateCircularReveal(View view) {
 
@@ -107,5 +108,5 @@ public class Adaptador extends RecyclerView.Adapter<ViewHolder> implements View.
         animation.start();
 
     }
-
+*/
 }

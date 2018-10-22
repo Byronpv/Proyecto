@@ -26,7 +26,11 @@ import java.util.Locale;
  * Use the {@link SERVICIOS#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SERVICIOS extends Fragment  implements TextToSpeech.OnInitListener, View.OnTouchListener, GestureDetector.OnGestureListener,  GestureDetector.OnDoubleTapListener {
+public class SERVICIOS extends Fragment  implements
+        TextToSpeech.OnInitListener,
+        View.OnTouchListener,
+        GestureDetector.OnGestureListener,
+        GestureDetector.OnDoubleTapListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -247,12 +251,12 @@ public class SERVICIOS extends Fragment  implements TextToSpeech.OnInitListener,
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         mIsVisibleToUser = isVisibleToUser;
-        if (isResumed()) { // fragment have created
+        if (mIsVisibleToUser ||  isResumed()) { // fragment have created
             if (mIsVisibleToUser) {
                 onVisible();
             } else {
                 onInVisible();
-                tts.stop();
+
             }
         }
     }
@@ -260,8 +264,9 @@ public class SERVICIOS extends Fragment  implements TextToSpeech.OnInitListener,
         speakOut();
     }
     public void onInVisible() {
-        //  Toast.makeText(getActivity(),  "invisible", Toast.LENGTH_SHORT).show();
-
+         tts.stop();
     }
+
+
 
 }

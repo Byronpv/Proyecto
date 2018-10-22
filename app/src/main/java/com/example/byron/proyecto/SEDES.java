@@ -26,7 +26,10 @@ import java.util.Locale;
  * Use the {@link SEDES#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SEDES extends Fragment  implements TextToSpeech.OnInitListener, View.OnTouchListener, GestureDetector.OnGestureListener,  GestureDetector.OnDoubleTapListener {
+public class SEDES extends Fragment  implements TextToSpeech.OnInitListener,
+        View.OnTouchListener,
+        GestureDetector.OnGestureListener,
+        GestureDetector.OnDoubleTapListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

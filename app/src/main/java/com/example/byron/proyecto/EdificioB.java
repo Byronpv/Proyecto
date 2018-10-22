@@ -26,7 +26,11 @@ import java.util.Locale;
  * Use the {@link EdificioB#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EdificioB extends Fragment implements TextToSpeech.OnInitListener, View.OnTouchListener, GestureDetector.OnGestureListener,  GestureDetector.OnDoubleTapListener  {
+public class EdificioB extends Fragment implements
+        TextToSpeech.OnInitListener,
+        View.OnTouchListener,
+        GestureDetector.OnGestureListener,
+        GestureDetector.OnDoubleTapListener  {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -165,9 +169,12 @@ public class EdificioB extends Fragment implements TextToSpeech.OnInitListener, 
     @Override
     public boolean onDoubleTap(MotionEvent motionEvent) {
 
-        Intent intent = new Intent (getActivity(), MapsActivity3.class);
+        String valorString = "EdificioB";
+        Intent intent= new Intent (getActivity(), MapsActivity3.class);
+        intent.putExtra("KeyString", valorString);
         startActivity(intent);
         return true;
+
     }
 
     @Override
@@ -249,7 +256,7 @@ public class EdificioB extends Fragment implements TextToSpeech.OnInitListener, 
                 onVisible();
             } else {
                 onInVisible();
-                tts.stop();
+
             }
         }
     }
@@ -261,7 +268,7 @@ public class EdificioB extends Fragment implements TextToSpeech.OnInitListener, 
 
     public void onInVisible() {
         //  Toast.makeText(getActivity(),  "invisible", Toast.LENGTH_SHORT).show();
-
+        tts.stop();
     }
 
 }

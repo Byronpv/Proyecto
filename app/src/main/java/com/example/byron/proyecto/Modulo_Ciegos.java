@@ -21,7 +21,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class    Modulo_Ciegos extends AppCompatActivity  implements EDIFICIOS.OnFragmentInteractionListener, SERVICIOS.OnFragmentInteractionListener, SEDES.OnFragmentInteractionListener{
+public class   Modulo_Ciegos extends AppCompatActivity  implements INICIO.OnFragmentInteractionListener, EDIFICIOS.OnFragmentInteractionListener, SERVICIOS.OnFragmentInteractionListener, SEDES.OnFragmentInteractionListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -124,11 +124,13 @@ public class    Modulo_Ciegos extends AppCompatActivity  implements EDIFICIOS.On
         public static  Fragment newInstance(int sectionNumber) {
             Fragment fragment = null;
             switch (sectionNumber){
-                case 1: fragment = new EDIFICIOS();
+                case 1: fragment = new INICIO();
                     break;
-                case 2: fragment = new SERVICIOS();
+                case 2: fragment = new EDIFICIOS();
                     break;
-                case 3: fragment = new SEDES();
+                case 3: fragment = new SERVICIOS();
+                    break;
+                case 4: fragment = new SEDES();
                     break;
             }
 
@@ -169,7 +171,7 @@ public class    Modulo_Ciegos extends AppCompatActivity  implements EDIFICIOS.On
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
     }
 }

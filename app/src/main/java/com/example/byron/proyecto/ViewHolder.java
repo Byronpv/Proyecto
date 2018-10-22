@@ -25,9 +25,6 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         imagen = (ImageView) itemView.findViewById(R.id.imagen);
         titulo = (TextView) itemView.findViewById(R.id.texto);
         ListaObjeto = datos;
-
-
-
         imagen.setOnClickListener(new View.OnClickListener() {
 
             @Override

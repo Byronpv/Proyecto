@@ -10,17 +10,16 @@
 
 
         android:layout_width="match_parent"
-        android:layout_height="343dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/regresar"
+        <ImageView
+            android:id="@+id/imagnormal"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:text="REGRESAR AL MENÚ PRINCIPAL"
-            android:textColor="#000"
-            android:textSize="30dp" />
-
+            android:layout_height="325dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
 
     </RelativeLayout>
 
@@ -32,14 +31,24 @@
     </LinearLayout>
 
 
+    <Button
+        android:id="@+id/distanceTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/map"
+        android:text="Calcular Ruta" />
+
     <fragment
 
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_height="297dp"
+        android:layout_alignParentBottom="true"
         tools:context="com.example.byron.proyecto.MapsActivity" />
+
+
 
 
 </LinearLayout>

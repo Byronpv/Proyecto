@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.byron.proyecto"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:maxSdkVersion="26"
@@ -18,8 +18,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
@@ -34,26 +36,30 @@
         android:glEsVersion="0x00020000"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="ROUTE-UPN"
-        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:roundIcon="@mipmap/icono_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
         <activity
-            android:name="com.example.byron.proyecto.Rout_upn"
+            android:name=".Rout_upn"
             android:label="ROUTE-UPN"
-            android:theme="@style/AppTheme3" >
+            android:theme="@style/AppTheme3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.byron.proyecto.Modulos" />
+        <activity android:name=".Modulos"
+            />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -67,36 +73,39 @@
             android:value="AIzaSyArME2QNDx9k_qmy8MNxVfx_Z_d8rQ82Qw" />
 
         <activity
-            android:name="com.example.byron.proyecto.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name="com.example.byron.proyecto.MapsActivity2"
+            android:name=".MapsActivity2"
             android:label="@string/title_activity_maps2" />
         <activity
-            android:name="com.example.byron.proyecto.Modulo_m_reducida"
+            android:name=".MapsActivity3"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Modulo_m_reducida"
             android:label="@string/title_activity_modulo_m_reducida"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.example.byron.proyecto.Modulo_sordos"
+            android:name=".Modulo_sordos"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name="com.example.byron.proyecto.Modulo_Estudiantes"
+            android:name=".Modulo_Estudiantes"
             android:label="@string/title_activity_modulo__estudiantes"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.example.byron.proyecto.Modulo_Ciegos"
+            android:name=".Modulo_Ciegos"
             android:label="@string/title_activity_modulo__ciegos"
             android:theme="@style/AppTheme3" />
         <activity
-            android:name="com.example.byron.proyecto.Edificios_ABPEC"
+            android:name=".Edificios_ABPEC"
             android:label="@string/title_activity_edificios__abpec"
             android:theme="@style/AppTheme3" />
         <activity
-            android:name="com.example.byron.proyecto.Servicios_U"
+            android:name=".Servicios_U"
             android:label="@string/title_activity_servicios__u"
             android:theme="@style/AppTheme3" />
         <activity
-            android:name="com.example.byron.proyecto.Sedes_U"
+            android:name=".Sedes_U"
             android:label="@string/title_activity_sedes__u"
             android:theme="@style/AppTheme3" />
 
@@ -115,6 +124,10 @@
         <meta-data
             android:name="android.arch.lifecycle.VERSION"
             android:value="27.0.0-SNAPSHOT" />
+
+        <activity
+            android:name=".MapsActivityRoute"
+            android:label="@string/title_activity_maps_route"></activity>
     </application>
 
 </manifest>
