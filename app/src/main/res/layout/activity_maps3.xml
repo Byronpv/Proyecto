@@ -17,6 +17,7 @@
             android:id="@+id/regresar"
             android:layout_width="match_parent"
             android:layout_height="350dp"
+            android:onClick="onClick"
             android:text="REGRESAR AL MENÚ PRINCIPAL"
             android:textColor="#000"
             android:textSize="30dp" />

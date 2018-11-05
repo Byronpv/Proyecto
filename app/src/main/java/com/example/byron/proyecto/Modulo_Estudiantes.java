@@ -177,14 +177,14 @@ public class Modulo_Estudiantes extends AppCompatActivity
             String valorString = "Ideas";
             Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.ideas);
             startActivity(intent);
         }
         else if (id == R.id.sede_nogal) {
             String valorString = "Nogal";
             Intent intent= new Intent (Modulo_Estudiantes.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.nogal);
             startActivity(intent);
         } else if (id == R.id.sede_sanmartin) {
             String valorString = "SanMartin";

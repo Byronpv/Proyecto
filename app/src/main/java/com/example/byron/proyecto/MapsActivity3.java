@@ -3,6 +3,7 @@ package com.example.byron.proyecto;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.media.MediaPlayer;
@@ -17,6 +18,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -42,7 +45,8 @@ import static com.google.android.gms.location.DetectedActivity.WALKING;
 public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+        LocationListener, View.OnClickListener
+{
 
 
     private GoogleMap mMap;
@@ -51,16 +55,19 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
     private Location mLocation;
     private Marker currentLocationMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
-    public static double RADIO= 1.0;
+    public static double RADIO=5;
     double end_Latitude, end_Longitude;
     double latitude, longitude;
+    private Button button;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps3);
-
+        button= (Button)findViewById(R.id.regresar);
+        button.setOnClickListener(this);
+     
 
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
@@ -170,7 +177,71 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
 
         if(stringRecibido.equals("EdificioA")){
 
-            Toast.makeText(this,"Edificio B", Toast.LENGTH_SHORT).show();
+            Object dataTransfer[] = new Object[2];
+            dataTransfer = new Object[7];
+            String url = getDirectionsUrl();
+            GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
+            dataTransfer[0] = mMap;
+            dataTransfer[1] = url;
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658035, -74.059274);
+            dataTransfer[4] = new LatLng(4.657982, -74.059183);
+            dataTransfer[5] = new LatLng(4.657947, -74.059124);
+            dataTransfer[5] = new LatLng(4.657843, -74.058985);
+            getDirectionsDataCiegos.execute(dataTransfer);
+            MarkerOptions markerOptions1= new MarkerOptions();
+            MarkerOptions markerOptions2= new MarkerOptions();
+            MarkerOptions markerOptions3= new MarkerOptions();
+            MarkerOptions markerOptions4= new MarkerOptions();
+            MarkerOptions markerOptions5= new MarkerOptions();
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658035, -74.059274));
+            markerOptions3.position(new LatLng(4.657982, -74.059183));
+            markerOptions4.position(new LatLng(4.657947, -74.059124));
+            markerOptions5.position(new LatLng(4.657843, -74.058985));
+            markerOptions5.title("Destino");
+            float results[] = new float[10];
+            float results1[] = new float[10];
+            float results2[] = new float[10];
+            float results3[] = new float[10];
+            float results4[] = new float[10];
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658035, -74.059274, results1);
+            Location.distanceBetween(latitude,longitude,4.657982, -74.059183, results2);
+            Location.distanceBetween(latitude,longitude,4.657947, -74.059124, results3);
+            Location.distanceBetween(latitude,longitude,4.657843, -74.058985, results4);
+            mMap.addMarker(markerOptions1);
+            mMap.addMarker(markerOptions2);
+            mMap.addMarker(markerOptions3);
+            mMap.addMarker(markerOptions4);
+            mMap.addMarker(markerOptions5);
+
+            if (results[0] < RADIO) {
+                Toast.makeText(this, "Ud está aquí", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }
+            else if(results1[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.gderecha);
+                mediaPlayer.start();
+
+            }else if(results2[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }else if(results3[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.glder_rampa);
+                mediaPlayer.start();
+            }else if(results4[0]<RADIO){
+                Toast.makeText(this, "Llegó", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.destino);
+                mediaPlayer.start();
+                vibrator.vibrate(800);
+
+
+            }
 
 
     }else if(stringRecibido.equals("EdificioB")){
@@ -182,28 +253,28 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.658741, -74.058806);
-            dataTransfer[3] = new LatLng(4.658522, -74.058975);
-            dataTransfer[4] = new LatLng(4.658426, -74.059042);
-            dataTransfer[5] = new LatLng(4.658393, -74.058991);
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658136, -74.059227);
+            dataTransfer[4] = new LatLng(4.658392, -74.059050);
+            dataTransfer[5] = new LatLng(4.658395, -74.058991);
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
             MarkerOptions markerOptions2= new MarkerOptions();
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.658741, -74.058806));
-            markerOptions2.position(new LatLng(4.658522, -74.058975));
-            markerOptions3.position(new LatLng(4.658426, -74.059042));
-            markerOptions4.position(new LatLng(4.658393, -74.058991));
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658136, -74.059227));
+            markerOptions3.position(new LatLng(4.658392, -74.059050));
+            markerOptions4.position(new LatLng(4.658395, -74.058991));
             markerOptions1.title("Destino");
             float results[] = new float[10];
             float results1[] = new float[10];
             float results2[] = new float[10];
             float results3[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.658741, -74.058806, results);
-            Location.distanceBetween(latitude,longitude,4.658522, -74.058975, results1);
-            Location.distanceBetween(latitude,longitude,4.658426, -74.059042, results2);
-            Location.distanceBetween(latitude,longitude,4.658393, -74.058991, results3);
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
+            Location.distanceBetween(latitude,longitude,4.658392, -74.059050, results2);
+            Location.distanceBetween(latitude,longitude,4.658395, -74.058991, results3);
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
             mMap.addMarker(markerOptions3);
@@ -217,7 +288,231 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
 
             else if(results1[0]<RADIO){
                 Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+
+            }else if(results2[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.gderecha);
+                mediaPlayer.start();
+            }else if(results3[0]<RADIO){
+                Toast.makeText(this, "Llegó", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.destino);
+                mediaPlayer.start();
                 vibrator.vibrate(800);
+
+            }
+        }
+        else if(stringRecibido.equals("EdificioC")){
+            Object dataTransfer[] = new Object[2];
+            dataTransfer = new Object[7];
+            String url = getDirectionsUrl();
+            GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
+            dataTransfer[0] = mMap;
+            dataTransfer[1] = url;
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658059, -74.059258);
+            dataTransfer[4] = new LatLng(4.658161, -74.059349);
+            dataTransfer[5] = new LatLng(4.658276, -74.059515);
+
+            getDirectionsDataCiegos.execute(dataTransfer);
+            MarkerOptions markerOptions1= new MarkerOptions();
+            MarkerOptions markerOptions2= new MarkerOptions();
+            MarkerOptions markerOptions3= new MarkerOptions();
+            MarkerOptions markerOptions4= new MarkerOptions();
+
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658059, -74.059258));
+            markerOptions3.position(new LatLng(4.658161, -74.059349));
+            markerOptions4.position(new LatLng(4.658276, -74.059515));
+
+            markerOptions4.title("Destino");
+            float results[] = new float[10];
+            float results1[] = new float[10];
+            float results2[] = new float[10];
+            float results3[] = new float[10];
+            float results4[] = new float[10];
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658059, -74.059258, results1);
+            Location.distanceBetween(latitude,longitude,4.658161, -74.059349, results2);
+            Location.distanceBetween(latitude,longitude,4.658276, -74.059515, results3);
+
+            mMap.addMarker(markerOptions1);
+            mMap.addMarker(markerOptions2);
+            mMap.addMarker(markerOptions3);
+            mMap.addMarker(markerOptions4);
+
+            if (results[0] < RADIO) {
+                Toast.makeText(this, "Ud está aquí", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }
+            else if(results1[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.gizquierda);
+                mediaPlayer.start();
+
+            }else if(results2[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }else if(results3[0]<RADIO){
+                Toast.makeText(this, "Llegó", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.destino);
+                mediaPlayer.start();
+            }
+        }
+        else if(stringRecibido.equals("Biblioteca")){
+            Object dataTransfer[] = new Object[2];
+            dataTransfer = new Object[7];
+            String url = getDirectionsUrl();
+            GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
+            dataTransfer[0] = mMap;
+            dataTransfer[1] = url;
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658035, -74.059274);
+            dataTransfer[4] = new LatLng(4.657982, -74.059183);
+            dataTransfer[5] = new LatLng(4.657947, -74.059124);
+            dataTransfer[5] = new LatLng(4.657843, -74.058985);
+            getDirectionsDataCiegos.execute(dataTransfer);
+            MarkerOptions markerOptions1= new MarkerOptions();
+            MarkerOptions markerOptions2= new MarkerOptions();
+            MarkerOptions markerOptions3= new MarkerOptions();
+            MarkerOptions markerOptions4= new MarkerOptions();
+            MarkerOptions markerOptions5= new MarkerOptions();
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658035, -74.059274));
+            markerOptions3.position(new LatLng(4.657982, -74.059183));
+            markerOptions4.position(new LatLng(4.657947, -74.059124));
+            markerOptions5.position(new LatLng(4.657843, -74.058985));
+            markerOptions5.title("Destino");
+            float results[] = new float[10];
+            float results1[] = new float[10];
+            float results2[] = new float[10];
+            float results3[] = new float[10];
+            float results4[] = new float[10];
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658035, -74.059274, results1);
+            Location.distanceBetween(latitude,longitude,4.657982, -74.059183, results2);
+            Location.distanceBetween(latitude,longitude,4.657947, -74.059124, results3);
+            Location.distanceBetween(latitude,longitude,4.657843, -74.058985, results4);
+            mMap.addMarker(markerOptions1);
+            mMap.addMarker(markerOptions2);
+            mMap.addMarker(markerOptions3);
+            mMap.addMarker(markerOptions4);
+            mMap.addMarker(markerOptions5);
+        }
+        else if(stringRecibido.equals("EdificioP")){
+            Object dataTransfer[] = new Object[2];
+            dataTransfer = new Object[7];
+            String url = getDirectionsUrl();
+            GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
+            dataTransfer[0] = mMap;
+            dataTransfer[1] = url;
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658136, -74.059227);
+            dataTransfer[4] = new LatLng(4.658398, -74.059020);
+            dataTransfer[5] = new LatLng(4.658659, -74.058843);
+            dataTransfer[5] = new LatLng(4.658715, -74.058916);
+            getDirectionsDataCiegos.execute(dataTransfer);
+            MarkerOptions markerOptions1= new MarkerOptions();
+            MarkerOptions markerOptions2= new MarkerOptions();
+            MarkerOptions markerOptions3= new MarkerOptions();
+            MarkerOptions markerOptions4= new MarkerOptions();
+            MarkerOptions markerOptions5= new MarkerOptions();
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658136, -74.059227));
+            markerOptions3.position(new LatLng(4.658398, -74.059020));
+            markerOptions4.position(new LatLng(4.658659, -74.058843));
+            markerOptions5.position(new LatLng(4.658715, -74.058916));
+            markerOptions5.title("Destino");
+            float results[] = new float[10];
+            float results1[] = new float[10];
+            float results2[] = new float[10];
+            float results3[] = new float[10];
+            float results4[] = new float[10];
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
+            Location.distanceBetween(latitude,longitude,4.658398, -74.059020, results2);
+            Location.distanceBetween(latitude,longitude,4.658659, -74.058843, results3);
+            Location.distanceBetween(latitude,longitude,4.658715, -74.058916, results4);
+            mMap.addMarker(markerOptions1);
+            mMap.addMarker(markerOptions2);
+            mMap.addMarker(markerOptions3);
+            mMap.addMarker(markerOptions4);
+            mMap.addMarker(markerOptions5);
+
+            if (results[0] < RADIO) {
+                Toast.makeText(this, "Ud está aquí", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }
+            else if(results1[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+
+            }else if(results2[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }else if(results3[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.gizquierda);
+                mediaPlayer.start();
+            }else if(results4[0]<RADIO){
+                Toast.makeText(this, "Llegó", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.destino);
+                mediaPlayer.start();
+                vibrator.vibrate(800);
+
+
+            }
+        }
+        else if(stringRecibido.equals("Restaurante")){
+            Object dataTransfer[] = new Object[2];
+            dataTransfer = new Object[6];
+            String url = getDirectionsUrl();
+            GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
+            dataTransfer[0] = mMap;
+            dataTransfer[1] = url;
+            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[3] = new LatLng(4.658136, -74.059227);
+            dataTransfer[4] = new LatLng(4.658398, -74.059020);
+            dataTransfer[5] = new LatLng(4.658448, -74.059090);
+            getDirectionsDataCiegos.execute(dataTransfer);
+            MarkerOptions markerOptions1= new MarkerOptions();
+            MarkerOptions markerOptions2= new MarkerOptions();
+            MarkerOptions markerOptions3= new MarkerOptions();
+            MarkerOptions markerOptions4= new MarkerOptions();
+            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions2.position(new LatLng(4.658136, -74.059227));
+            markerOptions3.position(new LatLng(4.658398, -74.059020));
+            markerOptions4.position(new LatLng(4.658448, -74.059090));
+            markerOptions1.title("Destino");
+            float results[] = new float[10];
+            float results1[] = new float[10];
+            float results2[] = new float[10];
+            float results3[] = new float[10];
+            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
+            Location.distanceBetween(latitude,longitude,4.658398, -74.059020, results2);
+            Location.distanceBetween(latitude,longitude,4.658448, -74.059090, results3);
+            mMap.addMarker(markerOptions1);
+            mMap.addMarker(markerOptions2);
+            mMap.addMarker(markerOptions3);
+            mMap.addMarker(markerOptions4);
+
+            if (results[0] < RADIO) {
+                Toast.makeText(this, "Ud está aquí", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }
+
+            else if(results1[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
 
             }else if(results2[0]<RADIO){
                 Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
@@ -231,44 +526,32 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
 
             }
         }
-        else if(stringRecibido.equals("EdificioC")){
-            Toast.makeText(this,"Edificio C", Toast.LENGTH_SHORT).show();
-        }
         else if(stringRecibido.equals("EdificioE")){
-            Toast.makeText(this,"Edificio E", Toast.LENGTH_SHORT).show();
-        }
-        else if(stringRecibido.equals("EdificioP")){
-            Toast.makeText(this,"Edificio P", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this,"Edificio E", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("BañosC")){
-            Toast.makeText(this,"Baños C", Toast.LENGTH_SHORT).show();
-        }
-        else if(stringRecibido.equals("Biblioteca")){
-            Toast.makeText(this,"Biblioteca", Toast.LENGTH_SHORT).show();
-        }
-        else if(stringRecibido.equals("Restaurante")){
-            Toast.makeText(this,"Restaurante", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this,"Restaurante", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Multipropósito")){
-            Toast.makeText(this,"Multipropósito", Toast.LENGTH_SHORT).show();
+        //    Toast.makeText(this,"Multipropósito", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Casadebiologia")){
-            Toast.makeText(this,"Casita de biología", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this,"Casita de biología", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Calle72")){
-            Toast.makeText(this,"Calle 72", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Calle 72", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Dar")){
-            Toast.makeText(this,"Dar", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Dar", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Ideas")){
-            Toast.makeText(this,"Ideas", Toast.LENGTH_SHORT).show();
+        //    Toast.makeText(this,"Ideas", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("Nogal")){
-            Toast.makeText(this,"Nogal", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this,"Nogal", Toast.LENGTH_SHORT).show();
         }
         else if(stringRecibido.equals("SanMartin")){
-            Toast.makeText(this,"SanMartin", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"SanMartin", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -329,4 +612,13 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
     }
 
 
-}
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.regresar:
+                Intent intent= new Intent(MapsActivity3.this, Modulo_Ciegos.class);
+                startActivity(intent);
+                break;
+
+    }
+}}

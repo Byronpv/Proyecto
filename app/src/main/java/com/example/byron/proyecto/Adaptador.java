@@ -54,7 +54,7 @@ public class Adaptador extends RecyclerView.Adapter<ViewHolder> implements View.
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.titulo.setText(ListaObjeto.get(position).getTitulo());
         holder.imagen.setImageResource(ListaObjeto.get(position).getImagen());
-
+/*
         holder.imagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +65,7 @@ public class Adaptador extends RecyclerView.Adapter<ViewHolder> implements View.
 
             }
         });
+        */
     }
     @Override
 

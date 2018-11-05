@@ -740,98 +740,62 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 } else if (stringRecibido.equals("Biblioteca1")) {
 
-                        LatLng UbicacionA = new LatLng(4.658791, -74.058805);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionA).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA));
+                    LatLng UbicacionA = new LatLng(4.657924, -74.059408);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionA).title("Ubicacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA));
 
-                        LatLng UbicacionB = new LatLng(4.658732, -74.058845);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionB).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB));
+                    LatLng UbicacionB = new LatLng(4.657994, -74.059358);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionB).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB));
 
-                        LatLng UbicacionC = new LatLng(4.658679, -74.058866);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionC).title("Ubicacion2").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC));
+                    LatLng UbicacionC = new LatLng(4.658076, -74.059320);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionC).title("Ubicacion2").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC));
 
-                        LatLng UbicacionD = new LatLng(4.658620, -74.058904);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionD).title("Ubicacion3").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD));
+                    LatLng UbicacionD = new LatLng(4.658047, -74.059253);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionD).title("Ubicacion3").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD));
 
-                        LatLng UbicacionA1 = new LatLng(4.658541, -74.058951);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionA1).title("Ubicacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA1));
+                    LatLng UbicacionA1 = new LatLng(4.658012, -74.059189);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionA1).title("Ubicacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA1));
 
-                        LatLng UbicacionB1 = new LatLng(4.658451, -74.058984);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionB1).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB1));
+                    LatLng UbicacionB1 = new LatLng(4.657977, -74.059117);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionB1).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB1));
 
-                        LatLng UbicacionC1 = new LatLng(4.658381, -74.059027);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionC1).title("Ubicacion2").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC1));
+                    LatLng UbicacionC1 = new LatLng(4.657937, -74.059047);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionC1).title("Ubicacion2").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC1));
 
-                        LatLng UbicacionD1 = new LatLng(4.658311, -74.059075);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionD1).title("Ubicacion3").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD1));
+                    LatLng UbicacionD1 = new LatLng(4.657889, -74.058977);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionD1).title("Ubicacion3").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD1));
 
-                        LatLng UbicacionA2 = new LatLng(4.658247, -74.059113);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionA2).title("Ubicacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA2));
+                    LatLng UbicacionA2 = new LatLng(4.657849, -74.058923);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionA2).title("Ubicacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA2));
 
-                        LatLng UbicacionB2 = new LatLng(4.658161, -74.059151);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionB2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB2));
+                    LatLng UbicacionB2 = new LatLng(4.657788, -74.058974);
+                    mMap.addMarker(new MarkerOptions().position(UbicacionB2).title("BIBLIOTECA").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin))).showInfoWindow();
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UbicacionB2, 18));
+                    imageView.setImageResource(imagen);
+                    mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                        @Override
+                        public boolean onMarkerClick(Marker marker) {
 
-                        LatLng UbicacionC2 = new LatLng(4.658118, -74.059210);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionC2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC2));
-
-                        LatLng UbicacionD2 = new LatLng(4.658075, -74.059248);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionD2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD2));
-
-                        LatLng UbicacionA3 = new LatLng(4.658043, -74.059269);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionA3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA3));
-
-                        LatLng UbicacionB3 = new LatLng(4.657975, -74.059199);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionB3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB3));
-
-                        LatLng UbicacionC3 = new LatLng(4.657935, -74.059133);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionC3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC3));
-
-                        LatLng UbicacionD3 = new LatLng(4.657908, -74.059101);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionD3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD3));
-
-                        LatLng UbicacionA4 = new LatLng(4.657892, -74.059069);
-                        mMap.addMarker(new MarkerOptions().position(UbicacionA4).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA4));
-
-                        LatLng UbicacionB4 = new LatLng(4.657860, -74.059090);
-
-                        mMap.addMarker(new MarkerOptions().position(UbicacionB4).title("BIBLIOTECA").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin))).showInfoWindow();
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UbicacionB4, 18));
-                        imageView.setImageResource(imagen);
-
-
-                        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                            @Override
-                            public boolean onMarkerClick(Marker marker) {
-
-                                mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter4(LayoutInflater.from(getApplication())));
-                                mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-                                    @Override
-                                    public void onInfoWindowClick(Marker marker) {
-                                        Uri uri = Uri.parse("http://biblioteca.pedagogica.edu.co/");
-                                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                                        startActivity(intent);
-                                    }
-                                });
-                                return false;
-                            }
-
-                        });
+                            mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter4(LayoutInflater.from(getApplication())));
+                            mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                                @Override
+                                public void onInfoWindowClick(Marker marker) {
+                                    Uri uri = Uri.parse("http://biblioteca.pedagogica.edu.co/");
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                    startActivity(intent);
+                                }
+                            });
+                            return false;
+                        }
+                    });
 
 
                     } else if (stringRecibido.equals("Edificio B1")) {

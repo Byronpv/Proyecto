@@ -158,7 +158,7 @@ public class Modulo_m_reducida extends AppCompatActivity
             String valorString = "Calle 72";
             Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.entrada72);
             startActivity(intent);
 
         }
@@ -166,21 +166,21 @@ public class Modulo_m_reducida extends AppCompatActivity
             String valorString = "Dar";
             Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.dar);
             startActivity(intent);
 
         }   else if (id == R.id.sede_ideas) {
             String valorString = "Ideas";
             Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.ideas);
             startActivity(intent);
         }
         else if (id == R.id.sede_nogal) {
             String valorString = "Nogal";
             Intent intent= new Intent (Modulo_m_reducida.this, MapsActivityRoute.class);
             intent.putExtra("KeyString", valorString);
-            intent.putExtra("hola", R.drawable.restaurantex);
+            intent.putExtra("hola", R.drawable.nogal);
             startActivity(intent);
         }
         else if (id == R.id.sede_sanmartin) {

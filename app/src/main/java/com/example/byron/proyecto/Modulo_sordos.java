@@ -34,20 +34,21 @@ public class Modulo_sordos extends AppCompatActivity {
 
         ArrayList<Fuente> imagen= new ArrayList<Fuente>();
 
-        imagen.add(new Fuente("BIBLIOTECA", R.drawable.bibliotecaint,0));
         imagen.add(new Fuente("EDIFICIO A", R.drawable.edificioa,0));
         imagen.add(new Fuente("EDIFICIO B", R.drawable.edificiob,0));
         imagen.add(new Fuente("EDIFICIO C", R.drawable.edificioc,0));
         imagen.add(new Fuente("EDIFICIO E", R.drawable.edificioe,0));
         imagen.add(new Fuente("EDIFICIO P", R.drawable.edificiop,0));
+        imagen.add(new Fuente("SUB. ADMISIONES Y REGISTRO", R.drawable.dar,0));
+        imagen.add(new Fuente("Sede: EL NOGAL", R.drawable.nogal,0));
+        imagen.add(new Fuente("BIBLIOTECA", R.drawable.bibliotecaint,0));
         imagen.add(new Fuente("ENFERMERÍA", R.drawable.enfermeriab1,0));
         imagen.add(new Fuente("BAÑOS EDIFICIO C", R.drawable.banosc,0));
         imagen.add(new Fuente("SALÓN MULTIPROPÓSITO", R.drawable.coliseo,0));
         imagen.add(new Fuente("CASA DE BIOLOGÍA", R.drawable.casadebiologia,0));
-        imagen.add(new Fuente("SUB. ADMISIONES Y REGISTRO", R.drawable.dar,0));
         imagen.add(new Fuente("Sede: CALLE 72", R.drawable.entrada_72,0));
-        imagen.add(new Fuente("Sede: EL NOGAL", R.drawable.nogal,0));
         imagen.add(new Fuente("Sede: F.U. SAN MARTÍN", R.drawable.sanmartin1,0));
+        imagen.add(new Fuente("Sede: Ideas", R.drawable.ideas,0));
 
         RecyclerView contenedor = (RecyclerView) findViewById(R.id.contenedor);
         contenedor.setHasFixedSize(true);

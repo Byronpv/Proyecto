@@ -44,7 +44,7 @@
             <item
                 android:id="@+id/sede_dar"
                 android:icon="@drawable/edificio"
-                android:title="Subdirección de Admisiones y Registro" />
+                android:title="Sub. de Admisiones y Registro" />
             <item
                 android:id="@+id/sede_calle72"
                 android:icon="@drawable/edificio"

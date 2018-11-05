@@ -1,8 +1,12 @@
 package com.example.byron.proyecto;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -50,6 +54,10 @@ public class MapsActivityRoute extends FragmentActivity implements OnMapReadyCal
     double end_Latitude, end_Longitude;
     double latitude, longitude;
     private Button button;
+    private int  MY_PERMISSIONS_REQUEST_READ_CONTACTS;
+    LocationManager locationManager;
+    android.location.LocationListener locationListener;
+    AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,6 +201,49 @@ public class MapsActivityRoute extends FragmentActivity implements OnMapReadyCal
             imageView.setImageResource(imagen);
         }
 
+
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+
+        if ( !locationManager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+            AlertNoGps();
+        }
+
+    }
+
+
+    private void AlertNoGps() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(MapsActivityRoute.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+
+
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Holo_Dialog);
+        builder.setMessage("El sistema GPS esta desactivado, ¿Desea activarlo?")
+                .setCancelable(false)
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        // AlertNoGps();
+
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(  DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        //  AlertNoGps();
+
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
 
     }
 
