@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class Sedes_U extends AppCompatActivity implements
+        Deslizar.OnFragmentInteractionListener,
         Sede_calle72.OnFragmentInteractionListener,
         Sede_ideas.OnFragmentInteractionListener,
         Sede_Nogal.OnFragmentInteractionListener,
@@ -116,18 +117,20 @@ public class Sedes_U extends AppCompatActivity implements
         public static  Fragment newInstance(int sectionNumber) {
             Fragment fragment = null;
             switch (sectionNumber){
-                case 1: fragment = new Sede_calle72();
+                case 1: fragment = new Deslizar();
                     break;
-                case 2: fragment = new Sede_dar();
+                case 2: fragment = new Sede_calle72();
                     break;
-                case 3: fragment = new Sede_ideas();
+                case 3: fragment = new Sede_dar();
                     break;
-                case 4: fragment = new Sede_Nogal();
+                case 4: fragment = new Sede_ideas();
                     break;
-                case 5: fragment = new Sede_SanMartin();
+                case 5: fragment = new Sede_Nogal();
+                    break;
+                case 6: fragment = new Sede_SanMartin();
                     break;
 
-                case 6: fragment = new Regresar_menu();
+                case 7: fragment = new Regresar_menu();
                     break;
 
             }
@@ -168,7 +171,7 @@ public class Sedes_U extends AppCompatActivity implements
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 6;
+            return 7;
         }
     }
 }

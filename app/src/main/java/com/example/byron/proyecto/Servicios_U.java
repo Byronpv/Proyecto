@@ -21,7 +21,14 @@ import android.widget.TextView;
 
 import java.nio.channels.MulticastChannel;
 
-public class Servicios_U extends AppCompatActivity implements Banos_C.OnFragmentInteractionListener, Regresar_menu.OnFragmentInteractionListener, Biblioteca.OnFragmentInteractionListener, Restaurante.OnFragmentInteractionListener, Multiproposito.OnFragmentInteractionListener, Casadebiologia.OnFragmentInteractionListener {
+public class Servicios_U extends AppCompatActivity implements
+        Deslizar.OnFragmentInteractionListener,
+        Banos_C.OnFragmentInteractionListener,
+        Regresar_menu.OnFragmentInteractionListener,
+        Biblioteca.OnFragmentInteractionListener,
+        Restaurante.OnFragmentInteractionListener,
+        Multiproposito.OnFragmentInteractionListener,
+        Casadebiologia.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -112,18 +119,20 @@ public class Servicios_U extends AppCompatActivity implements Banos_C.OnFragment
         public static  Fragment newInstance(int sectionNumber) {
             Fragment fragment = null;
             switch (sectionNumber){
-                case 1: fragment = new Banos_C();
+                case 1: fragment = new Deslizar();
                     break;
-                case 2: fragment = new Biblioteca();
+                case 2: fragment = new Banos_C();
                     break;
-                case 3: fragment = new Restaurante();
+                case 3: fragment = new Biblioteca();
                     break;
-                case 4: fragment = new Multiproposito();
+                case 4: fragment = new Restaurante();
                     break;
-                case 5: fragment = new Casadebiologia();
+                case 5: fragment = new Multiproposito();
+                    break;
+                case 6: fragment = new Casadebiologia();
                     break;
 
-                case 6: fragment = new Regresar_menu();
+                case 7: fragment = new Regresar_menu();
                     break;
 
             }
@@ -163,7 +172,7 @@ public class Servicios_U extends AppCompatActivity implements Banos_C.OnFragment
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 6;
+            return 7;
         }
     }
 }

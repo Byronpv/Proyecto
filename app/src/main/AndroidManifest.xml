@@ -51,6 +51,8 @@
         <activity
             android:name=".Rout_upn"
             android:label="ROUTE-UPN"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +61,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Modulos"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -74,38 +78,58 @@
 
         <activity
             android:name=".MapsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".MapsActivity2"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps2" />
         <activity
             android:name=".MapsActivity3"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".Modulo_m_reducida"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_modulo_m_reducida"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Modulo_sordos"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".Modulo_Estudiantes"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_modulo__estudiantes"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Modulo_Ciegos"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_modulo__ciegos"
             android:theme="@style/AppTheme3" />
         <activity
             android:name=".Edificios_ABPEC"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_edificios__abpec"
             android:theme="@style/AppTheme3" />
         <activity
             android:name=".Servicios_U"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_servicios__u"
             android:theme="@style/AppTheme3" />
         <activity
             android:name=".Sedes_U"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_sedes__u"
             android:theme="@style/AppTheme3" />
 
@@ -127,6 +151,8 @@
 
         <activity
             android:name=".MapsActivityRoute"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps_route"></activity>
     </application>
 

@@ -95,7 +95,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Holo_Dialog);
-            builder.setMessage("El sistema GPS esta desactivado, ¿Desea activarlo?")
+            builder.setMessage("El sistema GPS está desactivado, ¿Desea activarlo?")
                     .setCancelable(false)
                     .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                         public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
@@ -375,7 +375,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC1));
 
                     LatLng UbicacionD1 = new LatLng(4.658358, -74.059557);
-                    mMap.addMarker(new MarkerOptions().position(UbicacionD1).title("Ubicacion3"));
+                    mMap.addMarker(new MarkerOptions().position(UbicacionD1).title("Ubicacion3").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD1));
 
                     LatLng UbicacionA2 = new LatLng(4.658400, -74.059621);
@@ -1223,63 +1223,63 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.addMarker(new MarkerOptions().position(UbicacionB2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB2));
 
-                    LatLng UbicacionC2 = new LatLng(4.658158, -74.059157);
+                    LatLng UbicacionC2 = new LatLng(4.658309, -74.059209);
                     mMap.addMarker(new MarkerOptions().position(UbicacionC2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC2));
 
-                    LatLng UbicacionD2 = new LatLng(4.658113, -74.059197);
+                    LatLng UbicacionD2 = new LatLng(4.658357, -74.059257);
                     mMap.addMarker(new MarkerOptions().position(UbicacionD2).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD2));
 
-                    LatLng UbicacionA3 = new LatLng(4.658065, -74.059229);
+                    LatLng UbicacionA3 = new LatLng(4.658402, -74.059316);
                     mMap.addMarker(new MarkerOptions().position(UbicacionA3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA3));
 
-                    LatLng UbicacionB3 = new LatLng(4.658029, -74.059261);
+                    LatLng UbicacionB3 = new LatLng(4.658389, -74.059359);
                     mMap.addMarker(new MarkerOptions().position(UbicacionB3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB3));
 
-                    LatLng UbicacionC3 = new LatLng(4.658038, -74.059295);
+                    LatLng UbicacionC3 = new LatLng(4.658357, -74.059386);
                     mMap.addMarker(new MarkerOptions().position(UbicacionC3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC3));
 
-                    LatLng UbicacionD3 = new LatLng(4.658080, -74.059372);
+                    LatLng UbicacionD3 = new LatLng(4.658314, -74.059413);
                     mMap.addMarker(new MarkerOptions().position(UbicacionD3).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD3));
 
-                    LatLng UbicacionA4 = new LatLng(4.658150, -74.059450);
+                    LatLng UbicacionA4 = new LatLng(4.658271, -74.059440);
                     mMap.addMarker(new MarkerOptions().position(UbicacionA4).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA4));
 
-                    LatLng UbicacionB4 = new LatLng(4.658209, -74.059525);
+                    LatLng UbicacionB4 = new LatLng(4.658322, -74.059494);
                     mMap.addMarker(new MarkerOptions().position(UbicacionB4).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB4));
 
-                    LatLng UbicacionC4 = new LatLng(4.658310, -74.059496);
+                    LatLng UbicacionC4 = new LatLng(4.658381, -74.059561);
                     mMap.addMarker(new MarkerOptions().position(UbicacionC4).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC4));
 
-                    LatLng UbicacionD4 = new LatLng(4.658345, -74.059542);
+                    LatLng UbicacionD4 = new LatLng(4.658429, -74.059623);
                     mMap.addMarker(new MarkerOptions().position(UbicacionD4).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD4));
 
-                    LatLng UbicacionA5 = new LatLng(4.658409, -74.059638);
+                    LatLng UbicacionA5 = new LatLng(4.658474, -74.059674);
                     mMap.addMarker(new MarkerOptions().position(UbicacionA5).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionA5));
 
-                    LatLng UbicacionB5 = new LatLng(4.658468, -74.059721);
+                    LatLng UbicacionB5 = new LatLng(4.658525, -74.059738);
                     mMap.addMarker(new MarkerOptions().position(UbicacionB5).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionB5));
 
-                    LatLng UbicacionC5 = new LatLng(4.658513, -74.059775);
+                    LatLng UbicacionC5 = new LatLng(4.658552, -74.059805);
                     mMap.addMarker(new MarkerOptions().position(UbicacionC5).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionC5));
 
-                    LatLng UbicacionD5 = new LatLng(4.658569, -74.059858);
+                    LatLng UbicacionD5 = new LatLng(4.658592, -74.059864);
                     mMap.addMarker(new MarkerOptions().position(UbicacionD5).title("Ubicacion1").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(UbicacionD5));
 
-                    LatLng UbicacionA6 = new LatLng(4.658617, -74.059930);
+                    LatLng UbicacionA6 = new LatLng(4.658653, -74.059923);
                     mMap.addMarker(new MarkerOptions().position(UbicacionA6).title("EDIFICIO E").icon(BitmapDescriptorFactory.fromResource(R.drawable.pin))).showInfoWindow();
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UbicacionA6, 18));
                     imageView.setImageResource(imagen);

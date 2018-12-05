@@ -491,28 +491,28 @@ public class MapsActivity2 extends FragmentActivity implements
                  Bundle bundle = getIntent().getExtras();
                  String stringRecibido = bundle.getString("KeyString");
                  if(stringRecibido.equals("EdificioA")) {
-                     youTubePlayer.loadVideo("pL6m_oH-8X0");
+                     youTubePlayer.loadVideo("xkpsb3G45Co");
                  }
                  else if(stringRecibido.equals("EdificioB")){
-                     youTubePlayer.loadVideo("ilNA63N7tjo");
+                     youTubePlayer.loadVideo("yHw2v21DIIQ");
                  }
                  else if(stringRecibido.equals("EdificioC")){
-                     youTubePlayer.loadVideo("B-LW3OJDtkI");
+                     youTubePlayer.loadVideo("RWmmRMkBW3k");
                  }
                  else if(stringRecibido.equals("EdificioE")){
-                     youTubePlayer.loadVideo("-lcQiEquGiI");
+                     youTubePlayer.loadVideo("d9WXNo0nuMc");
                  }
                  else if(stringRecibido.equals("EdificioP")){
-                     youTubePlayer.loadVideo("qGeBWkj5aFU");
+                     youTubePlayer.loadVideo("RqGdqIireKA");
                  }
                  else if(stringRecibido.equals("Sub")){
-                     youTubePlayer.loadVideo("VhmiYI4_QXw");
+                     youTubePlayer.loadVideo("ReGUTFXIG_c");
                  }
                  else if(stringRecibido.equals("Nogal")){
-                     youTubePlayer.loadVideo("J_EaUK62TDc");
+                     youTubePlayer.loadVideo("rhz2UKb-QqI");
                  }
                  else if(stringRecibido.equals("Biblioteca")){
-                     youTubePlayer.loadVideo("pL6m_oH-8X0");
+                     youTubePlayer.loadVideo("xkpsb3G45Co");
                  }
              }
              @Override

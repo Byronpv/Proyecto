@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class Edificios_ABPEC extends AppCompatActivity implements
+        Deslizar.OnFragmentInteractionListener,
         EdificioA.OnFragmentInteractionListener,
         EdificioB.OnFragmentInteractionListener,
         EdificioC.OnFragmentInteractionListener,
@@ -116,17 +117,19 @@ public class Edificios_ABPEC extends AppCompatActivity implements
         public static  Fragment newInstance(int sectionNumber) {
             Fragment fragment = null;
             switch (sectionNumber){
-                case 1: fragment = new EdificioA();
+                case 1: fragment= new Deslizar();
+                break;
+                case 2: fragment = new EdificioA();
                     break;
-                case 2: fragment = new EdificioB();
+                case 3: fragment = new EdificioB();
                     break;
-                case 3: fragment = new EdificioC();
+                case 4: fragment = new EdificioC();
                     break;
-                case 4: fragment = new EdificioE();
+                case 5: fragment = new EdificioE();
                     break;
-                case 5: fragment = new EdificioP();
+                case 6: fragment = new EdificioP();
                     break;
-                case 6: fragment = new Regresar_menu();
+                case 7: fragment = new Regresar_menu();
                     break;
             }
 
@@ -165,7 +168,7 @@ public class Edificios_ABPEC extends AppCompatActivity implements
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 6;
+            return 7;
         }
     }
 }

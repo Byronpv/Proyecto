@@ -56,6 +56,7 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
     private Marker currentLocationMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
     public static double RADIO=5;
+    public static double RADIO1=4;
     double end_Latitude, end_Longitude;
     double latitude, longitude;
     private Button button;
@@ -183,33 +184,33 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
-            dataTransfer[3] = new LatLng(4.658035, -74.059274);
-            dataTransfer[4] = new LatLng(4.657982, -74.059183);
-            dataTransfer[5] = new LatLng(4.657947, -74.059124);
-            dataTransfer[5] = new LatLng(4.657843, -74.058985);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
+            dataTransfer[3] = new LatLng(4.658034, -74.059288);
+            dataTransfer[4] = new LatLng(4.658009, -74.059258);
+            dataTransfer[5] = new LatLng(4.657949, -74.059193);
+            dataTransfer[5] = new LatLng(4.657829, -74.059018);
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
             MarkerOptions markerOptions2= new MarkerOptions();
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
             MarkerOptions markerOptions5= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
-            markerOptions2.position(new LatLng(4.658035, -74.059274));
-            markerOptions3.position(new LatLng(4.657982, -74.059183));
-            markerOptions4.position(new LatLng(4.657947, -74.059124));
-            markerOptions5.position(new LatLng(4.657843, -74.058985));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
+            markerOptions2.position(new LatLng(4.658034, -74.059288));
+            markerOptions3.position(new LatLng(4.658009, -74.059258));
+            markerOptions4.position(new LatLng(4.657949, -74.059193));
+            markerOptions5.position(new LatLng(4.657829, -74.059018));
             markerOptions5.title("Destino");
             float results[] = new float[10];
             float results1[] = new float[10];
             float results2[] = new float[10];
             float results3[] = new float[10];
             float results4[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
-            Location.distanceBetween(latitude,longitude,4.658035, -74.059274, results1);
-            Location.distanceBetween(latitude,longitude,4.657982, -74.059183, results2);
-            Location.distanceBetween(latitude,longitude,4.657947, -74.059124, results3);
-            Location.distanceBetween(latitude,longitude,4.657843, -74.058985, results4);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
+            Location.distanceBetween(latitude,longitude,4.658034, -74.059288, results1);
+            Location.distanceBetween(latitude,longitude,4.658009, -74.059258, results2);
+            Location.distanceBetween(latitude,longitude,4.657949, -74.059193, results3);
+            Location.distanceBetween(latitude,longitude,4.657829, -74.059018, results4);
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
             mMap.addMarker(markerOptions3);
@@ -221,7 +222,7 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
                 mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
                 mediaPlayer.start();
             }
-            else if(results1[0]<RADIO){
+            else if(results1[0]<RADIO1){
                 Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
                 mediaPlayer= MediaPlayer.create(this, R.raw.gderecha);
                 mediaPlayer.start();
@@ -253,28 +254,28 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
             dataTransfer[3] = new LatLng(4.658136, -74.059227);
-            dataTransfer[4] = new LatLng(4.658392, -74.059050);
-            dataTransfer[5] = new LatLng(4.658395, -74.058991);
+            dataTransfer[4] = new LatLng(4.658366, -74.059069);
+            dataTransfer[5] = new LatLng(4.658401, -74.059007);
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
             MarkerOptions markerOptions2= new MarkerOptions();
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
             markerOptions2.position(new LatLng(4.658136, -74.059227));
-            markerOptions3.position(new LatLng(4.658392, -74.059050));
-            markerOptions4.position(new LatLng(4.658395, -74.058991));
+            markerOptions3.position(new LatLng(4.658366, -74.059069));
+            markerOptions4.position(new LatLng(4.658401, -74.059007));
             markerOptions1.title("Destino");
             float results[] = new float[10];
             float results1[] = new float[10];
             float results2[] = new float[10];
             float results3[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
             Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
-            Location.distanceBetween(latitude,longitude,4.658392, -74.059050, results2);
-            Location.distanceBetween(latitude,longitude,4.658395, -74.058991, results3);
+            Location.distanceBetween(latitude,longitude,4.658366, -74.059069, results2);
+            Location.distanceBetween(latitude,longitude,4.658401, -74.059007, results3);
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
             mMap.addMarker(markerOptions3);
@@ -310,10 +311,10 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
-            dataTransfer[3] = new LatLng(4.658059, -74.059258);
-            dataTransfer[4] = new LatLng(4.658161, -74.059349);
-            dataTransfer[5] = new LatLng(4.658276, -74.059515);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
+            dataTransfer[3] = new LatLng(4.658034, -74.059288);
+            dataTransfer[4] = new LatLng(4.658155, -74.059357);
+            dataTransfer[5] = new LatLng(4.658266, -74.059498);
 
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
@@ -321,10 +322,10 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
 
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
-            markerOptions2.position(new LatLng(4.658059, -74.059258));
-            markerOptions3.position(new LatLng(4.658161, -74.059349));
-            markerOptions4.position(new LatLng(4.658276, -74.059515));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
+            markerOptions2.position(new LatLng(4.658034, -74.059288));
+            markerOptions3.position(new LatLng(4.658155, -74.059357));
+            markerOptions4.position(new LatLng(4.658266, -74.059498));
 
             markerOptions4.title("Destino");
             float results[] = new float[10];
@@ -332,10 +333,10 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             float results2[] = new float[10];
             float results3[] = new float[10];
             float results4[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
-            Location.distanceBetween(latitude,longitude,4.658059, -74.059258, results1);
-            Location.distanceBetween(latitude,longitude,4.658161, -74.059349, results2);
-            Location.distanceBetween(latitude,longitude,4.658276, -74.059515, results3);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
+            Location.distanceBetween(latitude,longitude,4.658034, -74.059288, results1);
+            Location.distanceBetween(latitude,longitude,4.658155, -74.059357, results2);
+            Location.distanceBetween(latitude,longitude,4.658266, -74.059498, results3);
 
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
@@ -369,38 +370,66 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
-            dataTransfer[3] = new LatLng(4.658035, -74.059274);
-            dataTransfer[4] = new LatLng(4.657982, -74.059183);
-            dataTransfer[5] = new LatLng(4.657947, -74.059124);
-            dataTransfer[5] = new LatLng(4.657843, -74.058985);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
+            dataTransfer[3] = new LatLng(4.658034, -74.059288);
+            dataTransfer[4] = new LatLng(4.658009, -74.059258);
+            dataTransfer[5] = new LatLng(4.657949, -74.059193);
+            dataTransfer[5] = new LatLng(4.657829, -74.059018);
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
             MarkerOptions markerOptions2= new MarkerOptions();
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
             MarkerOptions markerOptions5= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
-            markerOptions2.position(new LatLng(4.658035, -74.059274));
-            markerOptions3.position(new LatLng(4.657982, -74.059183));
-            markerOptions4.position(new LatLng(4.657947, -74.059124));
-            markerOptions5.position(new LatLng(4.657843, -74.058985));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
+            markerOptions2.position(new LatLng(4.658034, -74.059288));
+            markerOptions3.position(new LatLng(4.658009, -74.059258));
+            markerOptions4.position(new LatLng(4.657949, -74.059193));
+            markerOptions5.position(new LatLng(4.657829, -74.059018));
             markerOptions5.title("Destino");
             float results[] = new float[10];
             float results1[] = new float[10];
             float results2[] = new float[10];
             float results3[] = new float[10];
             float results4[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
-            Location.distanceBetween(latitude,longitude,4.658035, -74.059274, results1);
-            Location.distanceBetween(latitude,longitude,4.657982, -74.059183, results2);
-            Location.distanceBetween(latitude,longitude,4.657947, -74.059124, results3);
-            Location.distanceBetween(latitude,longitude,4.657843, -74.058985, results4);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
+            Location.distanceBetween(latitude,longitude,4.658034, -74.059288, results1);
+            Location.distanceBetween(latitude,longitude,4.658009, -74.059258, results2);
+            Location.distanceBetween(latitude,longitude,4.657949, -74.059193, results3);
+            Location.distanceBetween(latitude,longitude,4.657829, -74.059018, results4);
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
             mMap.addMarker(markerOptions3);
             mMap.addMarker(markerOptions4);
             mMap.addMarker(markerOptions5);
+
+            if (results[0] < RADIO) {
+                Toast.makeText(this, "Ud está aquí", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }
+            else if(results1[0]<RADIO1){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer= MediaPlayer.create(this, R.raw.gderecha);
+                mediaPlayer.start();
+
+            }else if(results2[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.continuaenlinearecta);
+                mediaPlayer.start();
+            }else if(results3[0]<RADIO){
+                Toast.makeText(this, "En rango", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.glder_rampa);
+                mediaPlayer.start();
+            }else if(results4[0]<RADIO){
+                Toast.makeText(this, "Llegó", Toast.LENGTH_SHORT).show();
+                mediaPlayer=MediaPlayer.create(this, R.raw.destino);
+                mediaPlayer.start();
+                vibrator.vibrate(800);
+
+
+            }
+
         }
         else if(stringRecibido.equals("EdificioP")){
             Object dataTransfer[] = new Object[2];
@@ -409,7 +438,7 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
             dataTransfer[3] = new LatLng(4.658136, -74.059227);
             dataTransfer[4] = new LatLng(4.658398, -74.059020);
             dataTransfer[5] = new LatLng(4.658659, -74.058843);
@@ -420,7 +449,7 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
             MarkerOptions markerOptions5= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
             markerOptions2.position(new LatLng(4.658136, -74.059227));
             markerOptions3.position(new LatLng(4.658398, -74.059020));
             markerOptions4.position(new LatLng(4.658659, -74.058843));
@@ -431,7 +460,7 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             float results2[] = new float[10];
             float results3[] = new float[10];
             float results4[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
             Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
             Location.distanceBetween(latitude,longitude,4.658398, -74.059020, results2);
             Location.distanceBetween(latitude,longitude,4.658659, -74.058843, results3);
@@ -476,28 +505,28 @@ public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallbac
             GetDirectionsDataCiegos getDirectionsDataCiegos = new GetDirectionsDataCiegos();
             dataTransfer[0] = mMap;
             dataTransfer[1] = url;
-            dataTransfer[2] = new LatLng(4.657853, -74.059412);
+            dataTransfer[2] = new LatLng(4.657972, -74.059329);
             dataTransfer[3] = new LatLng(4.658136, -74.059227);
-            dataTransfer[4] = new LatLng(4.658398, -74.059020);
-            dataTransfer[5] = new LatLng(4.658448, -74.059090);
+            dataTransfer[4] = new LatLng(4.658366, -74.059069);
+            dataTransfer[5] = new LatLng(4.658443, -74.059089);
             getDirectionsDataCiegos.execute(dataTransfer);
             MarkerOptions markerOptions1= new MarkerOptions();
             MarkerOptions markerOptions2= new MarkerOptions();
             MarkerOptions markerOptions3= new MarkerOptions();
             MarkerOptions markerOptions4= new MarkerOptions();
-            markerOptions1.position(new LatLng(4.657853, -74.059412));
+            markerOptions1.position(new LatLng(4.657972, -74.059329));
             markerOptions2.position(new LatLng(4.658136, -74.059227));
-            markerOptions3.position(new LatLng(4.658398, -74.059020));
-            markerOptions4.position(new LatLng(4.658448, -74.059090));
+            markerOptions3.position(new LatLng(4.658366, -74.059069));
+            markerOptions4.position(new LatLng(4.658443, -74.059089));
             markerOptions1.title("Destino");
             float results[] = new float[10];
             float results1[] = new float[10];
             float results2[] = new float[10];
             float results3[] = new float[10];
-            Location.distanceBetween(latitude,longitude,4.657853, -74.059412, results);
+            Location.distanceBetween(latitude,longitude,4.657972, -74.059329, results);
             Location.distanceBetween(latitude,longitude,4.658136, -74.059227, results1);
-            Location.distanceBetween(latitude,longitude,4.658398, -74.059020, results2);
-            Location.distanceBetween(latitude,longitude,4.658448, -74.059090, results3);
+            Location.distanceBetween(latitude,longitude,4.658366, -74.059069, results2);
+            Location.distanceBetween(latitude,longitude,4.658443, -74.059089, results3);
             mMap.addMarker(markerOptions1);
             mMap.addMarker(markerOptions2);
             mMap.addMarker(markerOptions3);
